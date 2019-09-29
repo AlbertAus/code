@@ -1,0 +1,129 @@
+{
+    "companyInfo": {
+        "companyName": "Leffler - Jerde",
+        "companyMotto": "cutting-edge orchestrate ROI",
+        "companyEst": "2016-08-16T09:33:14.974Z"
+    },
+    "employees": [
+        {
+            "id": "e5188200-f430-4eff-9e16-57f80ae99c0f",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/low_res/128.jpg",
+            "firstName": "Taylor",
+            "lastName": "Adams",
+            "jobTitle": "Product Quality Agent",
+            "age": 49,
+            "bio": "Quo qui placeat consectetur sapiente. Amet quos aut doloribus reiciendis dolores iure. Maiores molestias sed blanditiis. Libero architecto illo fugit qui cupiditate placeat eveniet. Minus mollitia officia necessitatibus. Fuga sit nostrum maiores at sequi saepe quae.",
+            "dateJoined": "2017-01-08T06:41:33.973Z"
+        },
+        {
+            "id": "47dedb06-8337-4010-b895-bb9aeb7781dd",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/picard102/128.jpg",
+            "firstName": "Gabriel",
+            "lastName": "Howe",
+            "jobTitle": "Legacy Branding Administrator",
+            "age": 56,
+            "bio": "Expedita animi sunt omnis est qui aspernatur sunt. Suscipit est sit dolorem enim aut. Tempore fugiat sit eligendi. Doloribus doloremque et nostrum.",
+            "dateJoined": "2019-09-23T15:00:21.770Z"
+        },
+        {
+            "id": "529b79a6-c6b3-4cad-a44f-e74aa5e12d01",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/lokesh_coder/128.jpg",
+            "firstName": "Hannah",
+            "lastName": "King",
+            "jobTitle": "Global Solutions Architect",
+            "age": 59,
+            "bio": "Nihil autem a. Quibusdam natus rem illum. Sint aut omnis voluptas delectus nesciunt et reiciendis.",
+            "dateJoined": "2019-02-10T00:16:43.442Z"
+        },
+        {
+            "id": "ee31146c-d52c-4ae3-88af-ad54c792e9be",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/envex/128.jpg",
+            "firstName": "Kayla",
+            "lastName": "Goldner",
+            "jobTitle": "District Directives Representative",
+            "age": 29,
+            "bio": "Quidem minus commodi eligendi est. Enim voluptatem cumque maxime autem nemo temporibus rem quasi numquam. Aut unde a. Nesciunt sint repellat. Cupiditate at officia beatae maiores itaque qui quibusdam ducimus.",
+            "dateJoined": "2015-11-19T18:54:46.739Z"
+        },
+        {
+            "id": "9d914712-b635-4536-ae18-a7549d32c6ad",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/kevka/128.jpg",
+            "firstName": "Aiden",
+            "lastName": "Morgan",
+            "jobTitle": "Senior Assurance Strategist",
+            "age": 51,
+            "bio": "Dolores libero nihil molestiae rerum ipsam animi dicta. Quos sunt ut harum facilis itaque omnis inventore illo fugiat. Fugiat quisquam eum maxime in commodi omnis quibusdam error nam.",
+            "dateJoined": "2015-05-21T19:32:39.684Z"
+        },
+        {
+            "id": "fb6cbcc5-aa53-437a-a1f0-00bf9ee3dc49",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mr_subtle/128.jpg",
+            "firstName": "Matilda",
+            "lastName": "Richards",
+            "jobTitle": "Regional Web Liaison",
+            "age": 60,
+            "bio": "Error earum sit rem illo dolorum eaque. Voluptatum quis error nihil. Eum aut qui sunt quaerat similique quo cumque. Odit ut vero ut fugit deserunt reiciendis explicabo amet.",
+            "dateJoined": "2019-05-24T06:18:19.637Z"
+        },
+        {
+            "id": "bfe11eed-a714-4ab4-a89a-e8e615a183b0",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/9lessons/128.jpg",
+            "firstName": "Ethan",
+            "lastName": "Keeling",
+            "jobTitle": "Investor Functionality Supervisor",
+            "age": 29,
+            "bio": "Et vel quia magni deserunt labore et totam sit aperiam. Mollitia officiis quas fuga dolores sed accusantium corrupti. Aliquid cupiditate vitae. Autem repellendus soluta non nam sed voluptas eum. Temporibus facere sint et nemo maiores et ea.",
+            "dateJoined": "2017-08-21T18:46:48.714Z"
+        },
+        {
+            "id": "487cf7ed-d8fd-45ec-b780-686afc514c30",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/silvanmuhlemann/128.jpg",
+            "firstName": "Declan",
+            "lastName": "Ross",
+            "jobTitle": "Legacy Identity Designer",
+            "age": 27,
+            "bio": "Exercitationem voluptates quo itaque autem amet ea omnis inventore consequatur. Quisquam nisi est atque esse quos incidunt. Et qui eaque et est ab voluptatem maxime. Quis sint esse quia at consectetur recusandae repellat. Possimus a consequuntur doloremque qui dolorem impedit architecto. Rem voluptas aperiam quo praesentium.",
+            "dateJoined": "2013-07-30T08:28:36.848Z"
+        },
+        {
+            "id": "8a4d3591-323f-43eb-8c23-4b2375646978",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/teylorfeliz/128.jpg",
+            "firstName": "Zara",
+            "lastName": "Langworth",
+            "jobTitle": "District Directives Representative",
+            "age": 62,
+            "bio": "Non accusamus ullam. Iure velit dolorem rerum omnis distinctio. Sed sit exercitationem occaecati qui. Dolorem qui debitis repellendus unde consequatur recusandae.",
+            "dateJoined": "2014-11-30T00:37:07.594Z"
+        },
+        {
+            "id": "533e91a9-ff1a-49e4-ac4a-d3bede6298f5",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/netonet_il/128.jpg",
+            "firstName": "Liam",
+            "lastName": "Hoppe",
+            "jobTitle": "Global Branding Technician",
+            "age": 63,
+            "bio": "Provident dolorem dolor corrupti voluptatem. Dolores dolor ea ipsa sed dolores dolorem. Earum repudiandae odio consequatur dolor fugiat sunt eligendi saepe et. Cumque tempore error eos eius. Et rerum id aut fuga cumque aut autem nobis error.",
+            "dateJoined": "2015-12-10T09:05:51.681Z"
+        },
+        {
+            "id": "1b06524c-5ea4-4229-9040-245c043c8bb6",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/teylorfeliz/128.jpg",
+            "firstName": "Joel",
+            "lastName": "Davies",
+            "jobTitle": "Global Accountability Administrator",
+            "age": 57,
+            "bio": "Qui quis repudiandae est sed voluptatem corrupti minima. Ab qui voluptates cum id itaque minima. Sed rerum ullam facere temporibus soluta aut illum iure. Laudantium odit aut aperiam consectetur eligendi.",
+            "dateJoined": "2018-09-27T05:55:16.898Z"
+        },
+        {
+            "id": "63ca776a-be9a-4dd5-9adf-7a90b6f30e09",
+            "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/helderleal/128.jpg",
+            "firstName": "Phoebe",
+            "lastName": "Johns",
+            "jobTitle": "Chief Solutions Supervisor",
+            "age": 18,
+            "bio": "Animi non odio consequatur cum nostrum modi. Hic officia harum corporis qui beatae similique cupiditate nisi aut. Fuga corporis deserunt repellat ratione voluptatibus. Mollitia possimus totam reiciendis molestiae consequatur nam corporis consequatur eos. Autem possimus consequuntur ab enim nisi et porro. Aliquam ratione vel.",
+            "dateJoined": "2017-08-23T01:33:12.842Z"
+        }
+    ]
+}
