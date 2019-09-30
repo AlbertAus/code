@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Alert, Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, CardColumns, Card } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -48,27 +48,42 @@ class App extends Component {
       return <div>Loading...</div>;
     } else {
       const employeeInfo = [];
-      for (let i = 0; i < data.employees.length - 2; i = i + 3) {
+      for (let i = 0; i < data.employees.length; i++) {
         employeeInfo.push(
-          <Row>
-            <Col key={data.employees[i].id} xs={6} md={4}>
-              <img src={data.employees[i].avatar} alt={data.employees[i].firstName + " " + data.employees[i].lastName} />
-              {data.employees[i].firstName} {data.employees[i].lastName}<br />
-              {data.employees[i].bio.slice(0, 50)}...
-            </Col>
+          // <Col key={data.employees[i].id} xs={6} sm={6} md={4}>
+          //   <div class="clearfix div-img">
+          //     <img class="img2" src={data.employees[i].avatar} alt={data.employees[i].firstName + " " + data.employees[i].lastName}
+          //       style={{
+          //         width: 80 + 'px',
+          //         height: 80 + 'px'
+          //       }}
+          //     />
+          //     {data.employees[i].firstName} {data.employees[i].lastName}<br />
+          //     {data.employees[i].bio.slice(0, 30)}
+          //   </div>
+          // </Col>
 
-            <Col key={data.employees[i + 1].id} xs={6} md={4}>
-              <img src={data.employees[i + 1].avatar} alt={data.employees[i + 1].firstName + " " + data.employees[i + 1].lastName} />
-              {data.employees[i + 1].firstName} {data.employees[i + 1].lastName}<br />
-              {data.employees[i + 1].bio.slice(0, 50)}...
-            </Col>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm-6 text-right">
+                    <img class="img2"  src={data.employees[i].avatar} alt={data.employees[i].firstName + " " + data.employees[i].lastName}
+                      style={{
+                        width: 80 + 'px',
+                        height: 80 + 'px'
+                      }}
+                    />
+                  </div>
+                  <div class="col-sm-6">
+                    <h5 class="card-title">{data.employees[i].firstName} {data.employees[i].lastName}</h5>
+                    <p class="card-text">{data.employees[i].bio.slice(0, 30)}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <Col key={data.employees[i + 2].id} xs={6} md={4}>
-              <img src={data.employees[i + 2].avatar} alt={data.employees[i + 2].firstName + " " + data.employees[i + 2].lastName} />
-              {data.employees[i + 2].firstName} {data.employees[i + 2].lastName}<br />
-              {data.employees[i + 2].bio.slice(0, 50)}...
-            </Col>
-          </Row>
         )
       }
       return (
@@ -92,10 +107,33 @@ class App extends Component {
             </div>
 
             <hr />
-            <h3  class="text-left">Our Employees</h3>
-            {employeeInfo}
+
+            <Row>
+              <Col xs={6} sm={6} md={5}>
+                <h3 class="text-left">Our Employees</h3>
+              </Col>
+
+              <Col xs={6} sm={6} md={4}>
+                <div class="option-right">
+                  Sort by:&nbsp;
+                  <select name="sort" placeholder="first name">
+                    <option value="firstName">first name</option>
+                    <option value="lastName">last name</option>
+                  </select>
+                </div>
+              </Col>
+
+              <Col xs={6} sm={6} md={3}>
+                <div class="option-right">
+                  Serach&nbsp; <input></input>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              {employeeInfo}
+            </Row>
           </div>
-        </Container>
+        </Container >
       );
     }
   }

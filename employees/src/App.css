@@ -20,3 +20,27 @@
 .App-link {
   color: #09d3ac;
 }
+
+.img2 {
+  float: left;
+  margin-right: 0.2rem
+}
+
+.option-right {
+  float: right;
+  margin-right: 0.5rem
+}
+
+.div-img {
+  border: 1px solid #000000;
+  padding: 0;
+  margin-bottom: 1rem;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
