@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Alert, Container, Row, Col } from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -46,25 +47,55 @@ class App extends Component {
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
+      const employeeInfo = [];
+      for (let i = 0; i < data.employees.length - 2; i = i + 3) {
+        employeeInfo.push(
+          <Row>
+            <Col key={data.employees[i].id}>
+              <img src={data.employees[i].avatar} alt={data.employees[i].firstName + " " + data.employees[i].lastName} />
+              {data.employees[i].firstName} {data.employees[i].lastName}<br />
+              {data.employees[i].bio.slice(0, 50)}...
+            </Col>
+
+            <Col key={data.employees[i + 1].id}>
+              <img src={data.employees[i + 1].avatar} alt={data.employees[i + 1].firstName + " " + data.employees[i + 1].lastName} />
+              {data.employees[i + 1].firstName} {data.employees[i + 1].lastName}<br />
+              {data.employees[i + 1].bio.slice(0, 50)}...
+            </Col>
+
+            <Col key={data.employees[i + 2].id}>
+              <img src={data.employees[i + 2].avatar} alt={data.employees[i + 2].firstName + " " + data.employees[i + 2].lastName} />
+              {data.employees[i + 2].firstName} {data.employees[i + 2].lastName}<br />
+              {data.employees[i + 2].bio.slice(0, 50)}...
+            </Col>
+          </Row>
+        )
+      }
       return (
-        <div className="App">
-          {console.log("data is: ", data)}
-          Company Name<br />
-          {data.companyInfo.companyName} <br />
-          {data.companyInfo.companyMotto} <br />
-          {data.companyInfo.companyEst} <br />
-          Our Employees
-          <ul>
-            {data.employees.map(employee => (
-              <li key={employee.id}>
-                <img src={employee.avatar} alt={employee.firstName + " " + employee.lastName}/>
-                {employee.firstName} {employee.lastName}<br />
-                {employee.bio.slice(0,50)}...
-              </li>
-            ))
-            }
-          </ul>
-        </div>
+        <Container>
+          <div className="App">
+            {console.log("data is: ", data)}
+            <div class="page-header">
+              <p style={{ textAlign: 'left' }}><h2>{data.companyInfo.companyName}</h2></p>
+              <Row>
+                <Col>
+                  <h4 class="text-left">
+                    {data.companyInfo.companyMotto}
+                  </h4>
+                </Col>
+                <Col>
+                  <h4 class="text-right">
+                    Since {data.companyInfo.companyEst}
+                  </h4>
+                </Col>
+              </Row>
+            </div>
+
+            <hr />
+            <h3  class="text-left">Our Employees</h3>
+            {employeeInfo}
+          </div>
+        </Container>
       );
     }
   }
