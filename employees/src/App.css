@@ -23,7 +23,9 @@
 
 .img2 {
   float: left;
-  margin-right: 0.2rem
+  margin-right: 0rem;  
+  width: 80 + 'px';
+  height: 80 + 'px';
 }
 
 .option-right {

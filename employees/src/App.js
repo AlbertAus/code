@@ -49,41 +49,22 @@ class App extends Component {
     } else {
       const employeeInfo = [];
       for (let i = 0; i < data.employees.length; i++) {
-        employeeInfo.push(
-          // <Col key={data.employees[i].id} xs={6} sm={6} md={4}>
-          //   <div class="clearfix div-img">
-          //     <img class="img2" src={data.employees[i].avatar} alt={data.employees[i].firstName + " " + data.employees[i].lastName}
-          //       style={{
-          //         width: 80 + 'px',
-          //         height: 80 + 'px'
-          //       }}
-          //     />
-          //     {data.employees[i].firstName} {data.employees[i].lastName}<br />
-          //     {data.employees[i].bio.slice(0, 30)}
-          //   </div>
-          // </Col>
-
-          <div class="col-sm-6">
-            <div class="card">
-              <div class="card-body">
+        employeeInfo.push(         
+          <Col key={data.employees[i].id} xs={12} sm={6} md={4}>
+            <div class="card" style={{ marginBottom: 1 + 'rem' }}>
+              <div class="card-body clearfix" style={{ padding: 0 }}>
                 <div class="row">
-                  <div class="col-sm-6 text-right">
-                    <img class="img2"  src={data.employees[i].avatar} alt={data.employees[i].firstName + " " + data.employees[i].lastName}
-                      style={{
-                        width: 80 + 'px',
-                        height: 80 + 'px'
-                      }}
-                    />
+                  <div class="col-6 text-left">
+                    <img class="img2" src={data.employees[i].avatar} alt={data.employees[i].firstName + " " + data.employees[i].lastName} />
                   </div>
-                  <div class="col-sm-6">
+                  <div class="col-6">
                     <h5 class="card-title">{data.employees[i].firstName} {data.employees[i].lastName}</h5>
                     <p class="card-text">{data.employees[i].bio.slice(0, 30)}</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
+          </Col>
         )
       }
       return (
@@ -109,24 +90,20 @@ class App extends Component {
             <hr />
 
             <Row>
-              <Col xs={6} sm={6} md={5}>
+              <Col xs={6} sm={6} md={4}>
                 <h3 class="text-left">Our Employees</h3>
               </Col>
 
               <Col xs={6} sm={6} md={4}>
-                <div class="option-right">
                   Sort by:&nbsp;
                   <select name="sort" placeholder="first name">
                     <option value="firstName">first name</option>
                     <option value="lastName">last name</option>
                   </select>
-                </div>
               </Col>
 
-              <Col xs={6} sm={6} md={3}>
-                <div class="option-right">
+              <Col xs={12} sm={12} md={4}>
                   Serach&nbsp; <input></input>
-                </div>
               </Col>
             </Row>
             <Row>
