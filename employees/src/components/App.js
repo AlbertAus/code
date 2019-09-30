@@ -14,18 +14,19 @@ class App extends Component {
       isLoaded: false,
       data: {},
       isShow: false,
+      highLight : ''
     };
   }
 
   // showDetails will show the pop-up windows to show the employee deatils.
   toggleShow = (i) => {    
-    console.log("i is: ",i)
+    console.log("i is: ",i)    
     if(Number.isInteger(i)){
       this.employee =this.state.data.employees[i];
+      this.setState({highLight: this.state.data.employees[i].id});
     }else{
       this.employee =this.state.data.employees[0];
-    }
-
+    }    
     this.setState(state => ({isShow: !state.isShow }));
   }
 
@@ -67,15 +68,20 @@ class App extends Component {
 
       // Generate the employee Info to each Column, then use in the Row.
       const employeeInfo = [];
+      let className =null;
       for (let i = 0; i < data.employees.length; i++) {
         data.employees[i].dateJoined=data.employees[i].dateJoined.slice(0,10);
+        if(data.employees[i].id==this.state.highLight && this.state.isShow){
+           className= 'card card-highlight'
+        }else{
+          className=null 
+        }
         employeeInfo.push(
-          <Col
-            key={data.employees[i].id}
+          <Col            
             xs={12} sm={6} md={4}
             onClick={() => this.toggleShow(i)}
           >
-            <div class="card" style={{ marginBottom: 1 + 'rem' }}>
+            <div key={data.employees[i].id} className={className}  style={{ marginBottom: 1 + 'rem' }}>
               <div class="card-body clearfix" style={{ padding: 0 }}>
                 <div class="row">
                   <div class="col-6 text-left">

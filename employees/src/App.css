@@ -63,5 +63,12 @@
 }
 
 .smallFont{
-  font-size: 2px;
+  font-size: 0.8rem;
+}
+
+
+.card.card-highlight {
+  background-color: pink;
+  border-color: black;
+  outline: none !important;
 }
