@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
-import './App.css';
-import { Container, Row, Col, CardColumns, Card } from 'react-bootstrap';
+import '../App.css';
+import { Container, Row, Col, CardColumns, Card, Modal, Button } from 'react-bootstrap';
+import PopUp from './PopUp';
 
 class App extends Component {
   constructor(props) {
     super(props)
+    this.toggleShow = this.toggleShow.bind(this);
+    this.employee={};
 
     this.state = {
       error: null,
       isLoaded: false,
-      data: {}
+      data: {},
+      isShow: false,
     };
   }
 
+  // showDetails will show the pop-up windows to show the employee deatils.
+  toggleShow = (i) => {    
+    console.log("i is: ",i)
+    if(Number.isInteger(i)){
+      this.employee =this.state.data.employees[i];
+    }else{
+      this.employee =this.state.data.employees[0];
+    }
+
+    this.setState(state => ({isShow: !state.isShow }));
+  }
+
+  // Using componentDidMount to fetch the sample-data.json file.
   componentDidMount() {
     fetch('./data/sample-data.json', {
       headers: {
@@ -47,10 +64,16 @@ class App extends Component {
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
+
+      // Generate the employee Info to each Column, then use in the Row.
       const employeeInfo = [];
       for (let i = 0; i < data.employees.length; i++) {
-        employeeInfo.push(         
-          <Col key={data.employees[i].id} xs={12} sm={6} md={4}>
+        employeeInfo.push(
+          <Col
+            key={data.employees[i].id}
+            xs={12} sm={6} md={4}
+            onClick={() => this.toggleShow(i)}
+          >
             <div class="card" style={{ marginBottom: 1 + 'rem' }}>
               <div class="card-body clearfix" style={{ padding: 0 }}>
                 <div class="row">
@@ -69,6 +92,10 @@ class App extends Component {
       }
       return (
         <Container>
+
+          {/* Show or hide the PopUp window */}
+          <PopUp employee={this.employee} isShow={this.state.isShow} handleClick={this.toggleShow} />
+
           <div className="App">
             {console.log("data is: ", data)}
             <div class="page-header">
@@ -95,17 +122,19 @@ class App extends Component {
               </Col>
 
               <Col xs={6} sm={6} md={4}>
-                  Sort by:&nbsp;
+                Sort by:&nbsp;
                   <select name="sort" placeholder="first name">
-                    <option value="firstName">first name</option>
-                    <option value="lastName">last name</option>
-                  </select>
+                  <option value="firstName">first name</option>
+                  <option value="lastName">last name</option>
+                </select>
               </Col>
 
               <Col xs={12} sm={12} md={4}>
-                  Serach&nbsp; <input></input>
+                Serach&nbsp; <input></input>
               </Col>
             </Row>
+
+            {/* Showing all the employees info in the Row with employeeInfo columns */}
             <Row>
               {employeeInfo}
             </Row>
