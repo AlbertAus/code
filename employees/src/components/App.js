@@ -68,6 +68,7 @@ class App extends Component {
       // Generate the employee Info to each Column, then use in the Row.
       const employeeInfo = [];
       for (let i = 0; i < data.employees.length; i++) {
+        data.employees[i].dateJoined=data.employees[i].dateJoined.slice(0,10);
         employeeInfo.push(
           <Col
             key={data.employees[i].id}
@@ -108,7 +109,7 @@ class App extends Component {
                 </Col>
                 <Col>
                   <h4 class="text-right">
-                    Since {data.companyInfo.companyEst}
+                    Since {data.companyInfo.companyEst.slice(0, 10)}
                   </h4>
                 </Col>
               </Row>
