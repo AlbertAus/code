@@ -51,19 +51,19 @@ class App extends Component {
       for (let i = 0; i < data.employees.length - 2; i = i + 3) {
         employeeInfo.push(
           <Row>
-            <Col key={data.employees[i].id}>
+            <Col key={data.employees[i].id} xs={6} md={4}>
               <img src={data.employees[i].avatar} alt={data.employees[i].firstName + " " + data.employees[i].lastName} />
               {data.employees[i].firstName} {data.employees[i].lastName}<br />
               {data.employees[i].bio.slice(0, 50)}...
             </Col>
 
-            <Col key={data.employees[i + 1].id}>
+            <Col key={data.employees[i + 1].id} xs={6} md={4}>
               <img src={data.employees[i + 1].avatar} alt={data.employees[i + 1].firstName + " " + data.employees[i + 1].lastName} />
               {data.employees[i + 1].firstName} {data.employees[i + 1].lastName}<br />
               {data.employees[i + 1].bio.slice(0, 50)}...
             </Col>
 
-            <Col key={data.employees[i + 2].id}>
+            <Col key={data.employees[i + 2].id} xs={6} md={4}>
               <img src={data.employees[i + 2].avatar} alt={data.employees[i + 2].firstName + " " + data.employees[i + 2].lastName} />
               {data.employees[i + 2].firstName} {data.employees[i + 2].lastName}<br />
               {data.employees[i + 2].bio.slice(0, 50)}...
