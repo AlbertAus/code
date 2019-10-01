@@ -18,7 +18,7 @@ class App extends Component {
       isShow: false,
       highLight: '',
       inputValue:'',
-      selectedValue:'first name'
+      selectedValue:'firstName'
     };
   }
 
@@ -99,7 +99,7 @@ class App extends Component {
         }
 
         if ((this.state.selectedValue==="firstName" && employee.firstName.includes(this.state.inputValue)) || 
-            (this.state.selectedValue==="lastName" &&  employee.lastName.includes(this.state.inputValue))) {
+            (this.state.selectedValue==="lastName" &&  employee.lastName.includes(this.state.inputValue)) || this.state.inputValue=="") {
           employeeInfoFilter.push(
             <Col
               xs={12} sm={6} md={4}
