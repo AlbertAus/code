@@ -98,8 +98,8 @@ class App extends Component {
           className = null
         }
 
-        if ((this.state.selectedValue==="firstName" && employee.firstName.includes(this.state.inputValue)) || 
-            (this.state.selectedValue==="lastName" &&  employee.lastName.includes(this.state.inputValue)) || this.state.inputValue=="") {
+        if ((this.state.selectedValue==="firstName" && employee.firstName.toLowerCase().includes(this.state.inputValue.toLowerCase())) || 
+            (this.state.selectedValue==="lastName" &&  employee.lastName.toLowerCase().includes(this.state.inputValue.toLowerCase())) || this.state.inputValue=="") {
           employeeInfoFilter.push(
             <Col
               xs={12} sm={6} md={4}
